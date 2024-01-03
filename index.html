@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+    <title>Observer Example</title>
+</head>
+<body>
+<h1>CursusDB Observer Example</h1>
+<ul id="events">
+
+</ul>
+
+<script>
+    (async function() {
+        const socket = new WebSocket("ws://localhost:8081");
+
+        // Connection opened
+        socket.addEventListener("open", (event) => {
+            console.log("Connection established with WS server.")
+        });
+
+        // Listen for messages
+        socket.addEventListener("message", (event) => {
+            const li = document.createElement("li")
+            li.textContent = event.data
+            document.getElementById("events").appendChild(li)
+        });
+    })()
+</script>
+</body>
+</html>

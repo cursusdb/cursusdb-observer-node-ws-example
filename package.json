@@ -1,0 +1,17 @@
+{
+  "name": "observer-to-ws-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cursusdb-observer-node": "^1.0.4",
+    "express": "^4.18.2",
+    "ws": "^8.16.0"
+  }
+}
